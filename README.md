@@ -1,13 +1,18 @@
-# Voltage-Prediction
+# 🔋 Battery Passport  
 
-Goal: Predict the next BatteryVoltage using Time and BatteryCurrent as input features in a deep learning model (LSTM).
+## 📌 Overview  
+Battery Passport is a research-patent project developed under **Suavy Technology**. It integrates **machine learning, electrochemical modeling, blockchain, and cloud computing** to enable secure, real-time battery health monitoring and lifecycle tracking. The system estimates **State of Charge (SOC)** on-device and calculates **State of Health (SOH)** in the cloud while ensuring secure data management through blockchain technology.
 
-Steps:
-1. Data Preparation: The dataset was preprocessed by normalizing Time, BatteryCurrent, and BatteryVoltage. A sliding window approach (window size = 5) was used to prepare the data for the LSTM model.
-Model Training: An LSTM model was trained to predict the next BatteryVoltage using past values of Time and BatteryCurrent.
+## 🚀 Key Features  
+- **Battery Parameter Estimation**: Predicts key battery parameters using machine learning models.  
+- **SOC & SOH Calculation**: SOC is calculated on-device, while SOH is computed on the cloud for real-time diagnostics.  
+- **Blockchain Integration**: Ensures secure and transparent battery data tracking.  
+- **Cloud-Based Analysis**: Enables efficient storage, computation, and battery health predictions.  
+- **Smart Battery Swapping Pricing**: Determines charging costs based on battery health and remaining lifespan.  
 
-2. Error Handling: A ValueError occurred due to mismatched feature dimensions during scaling. The MinMaxScaler expected 3 features but was given only 2 during prediction.
-
-3. Solution: The prediction function was updated to handle this issue by adding a dummy BatteryVoltage column during scaling and inverse scaling only the predicted voltage.
-
-4. Prediction Code: The revised code predicts BatteryVoltage using a trained LSTM model by scaling the input correctly and applying inverse scaling after prediction.
+## 🛠️ Technologies Used  
+- **Machine Learning** (LSTM, Neural Networks)  
+- **Electrochemical Modeling**  
+- **Blockchain** (for secure data storage and traceability)  
+- **Cloud Computing** (for real-time battery diagnostics)  
+- **Python, TensorFlow, NumPy, Pandas**  
